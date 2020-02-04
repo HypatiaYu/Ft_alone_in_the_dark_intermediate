@@ -1,0 +1,93 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r5p37.42.us.org
+Darwin 17.5.0 x86_64
+$> date
+Mon Feb  3 18:42:05 PST 2020
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2020/c-exam-alone-in-the-dark-intermediate/practice-exam_20200204/hyu
+
+= Git history ==================================================================
+$> git -C /var/folders/zw/plxncd2n24v9qb2dgxbknqwh0000gp/T/tmpddD7NQ/user log --pretty='%H - %an, %ad : %s'
+957bdc2dc1af074d017d2a87c5cf9c36c00f5686 - Helen Yu, Mon Feb 3 18:41:54 2020 -0800 : find_pivot.c
+08a446c0d52c32afcce96fe933c9b281ba9379d0 - Helen Yu, Mon Feb 3 17:47:42 2020 -0800 : count_of_2.c
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/zw/plxncd2n24v9qb2dgxbknqwh0000gp/T/tmpddD7NQ/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  506 Feb  3 18:42 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Feb  3 18:42 count_of_2
+drwxr-xr-x  3 deepthought  deepthought  102 Feb  3 18:42 find_pivot
+
+/var/folders/zw/plxncd2n24v9qb2dgxbknqwh0000gp/T/tmpddD7NQ/user/count_of_2:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1122 Feb  3 18:42 count_of_2.c
+
+/var/folders/zw/plxncd2n24v9qb2dgxbknqwh0000gp/T/tmpddD7NQ/user/find_pivot:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1290 Feb  3 18:42 find_pivot.c
+ 
+= find_pivot ===================================================================
+$> gcc -Wextra -Wall -Werror find_pivot.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./v3qmbpu3lu3ko436v8ideerv test_00.txt
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./a4ha5iqyul9ianiq4jjsycpm test_01.txt
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./672ywd1b91tiq6jlmcddlsy3 test_02.txt
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./uju4k20hi92xj2nzyp3wc9el test_03.txt
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./k381nv046yb4i5p2lkmrtk3u test_04.txt
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./jv4oth4lmbbqwvf80k4ap2ev test_05.txt
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./opuzk108dzqo3e6un5y1pvci test_06.txt
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./46hvel2s0vrr3ngiv8cux2yu test_07.txt
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./kyosdjtafj58zahseqtdwfvb test_08.txt
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
