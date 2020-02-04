@@ -1,0 +1,154 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r9p22.42.us.org
+Darwin 17.4.0 x86_64
+$> date
+Mon Feb  3 19:41:10 PST 2020
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2020/c-exam-alone-in-the-dark-intermediate/practice-exam_20200204/hyu
+
+= Git history ==================================================================
+$> git -C /var/folders/vg/tn6wb9d126v7hvtvlvvbgptc0000gp/T/tmpAluYe3/user log --pretty='%H - %an, %ad : %s'
+29fc03e923266b345fef02bfd23c324c42efffd7 - Helen Yu, Mon Feb 3 19:41:00 2020 -0800 : height_tree.c
+957bdc2dc1af074d017d2a87c5cf9c36c00f5686 - Helen Yu, Mon Feb 3 18:41:54 2020 -0800 : find_pivot.c
+08a446c0d52c32afcce96fe933c9b281ba9379d0 - Helen Yu, Mon Feb 3 17:47:42 2020 -0800 : count_of_2.c
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/vg/tn6wb9d126v7hvtvlvvbgptc0000gp/T/tmpAluYe3/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  759 Feb  3 19:41 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Feb  3 19:41 count_of_2
+drwxr-xr-x  3 deepthought  deepthought  102 Feb  3 19:41 find_pivot
+drwxr-xr-x  3 deepthought  deepthought  102 Feb  3 19:41 height_tree
+
+/var/folders/vg/tn6wb9d126v7hvtvlvvbgptc0000gp/T/tmpAluYe3/user/count_of_2:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1122 Feb  3 19:41 count_of_2.c
+
+/var/folders/vg/tn6wb9d126v7hvtvlvvbgptc0000gp/T/tmpAluYe3/user/find_pivot:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1290 Feb  3 19:41 find_pivot.c
+
+/var/folders/vg/tn6wb9d126v7hvtvlvvbgptc0000gp/T/tmpAluYe3/user/height_tree:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1383 Feb  3 19:41 height_tree.c
+ 
+= height_tree ==================================================================
+$> gcc -Wextra -Wall -Werror height_tree.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./qt7btm1meqo91m0iptsikalt 0
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./oarb7gd7m98cfh6czwn2t5ya 1
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./nejttgvtd5dcj85udgymd1ix 2
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./3x2ieiwxdijix1oqh2dwz83b 106
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./o65w7bjy7dq00cxu9rn4w7kk 4
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./4cvqvc4vbb9et4s2ti1idx7e 5
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./uuind1w1jkh2sjvmg3bgguvf 6
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./cxxkj7qn8tkium804givk0y0 7
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./bxxvywdm9h0vrk4ew6omeb7l 107
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./i891e0yjtj3xopsnzak6m2fe 9
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./n6nv350ojlq6lrtlz4kb6eb1 208
+$> diff -U 3 user_output_test11 test11.output | cat -e
+
+Diff OK :D
+= Test 12 ==================================================
+$> ./0qb7yllsfg61gjomfc3cjucw 421421
+$> diff -U 3 user_output_test12 test12.output | cat -e
+
+Diff OK :D
+= Test 13 ==================================================
+$> ./xqcv10ph3c4bl24ofaqdg59l 12
+$> diff -U 3 user_output_test13 test13.output | cat -e
+
+Diff OK :D
+= Test 14 ==================================================
+$> ./9bvbnjko9s0ke53l3n2qnz64 13
+$> diff -U 3 user_output_test14 test14.output | cat -e
+
+Diff OK :D
+= Test 15 ==================================================
+$> ./0llgjczoy6u14u6udpu7u35i 14
+$> diff -U 3 user_output_test15 test15.output | cat -e
+
+Diff OK :D
+= Test 16 ==================================================
+$> ./1axnw7ye98gf1t7wbg9oikr1 15
+$> diff -U 3 user_output_test16 test16.output | cat -e
+
+Diff OK :D
+= Test 17 ==================================================
+$> ./pk5z4wrnuk7nraucpagn6zj2 1001
+$> diff -U 3 user_output_test17 test17.output | cat -e
+
+Diff OK :D
+= Test 18 ==================================================
+$> ./htv7epzjnyrrjpd6iap8b2j2 17
+$> diff -U 3 user_output_test18 test18.output | cat -e
+
+Diff OK :D
+= Test 19 ==================================================
+$> ./6oy6wvtgdtri0y5telt1dk4h 47
+$> diff -U 3 user_output_test19 test19.output | cat -e
+
+Diff OK :D
+= Test 20 ==================================================
+$> ./zduo6oxf6c37nmw55d2kmr7p 116
+$> diff -U 3 user_output_test20 test20.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
