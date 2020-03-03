@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyu <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/02 20:20:49 by hyu               #+#    #+#             */
-/*   Updated: 2020/03/02 21:16:07 by hyu              ###   ########.fr       */
+/*   Created: 2020/03/02 22:33:40 by hyu               #+#    #+#             */
+/*   Updated: 2020/03/02 22:50:38 by hyu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,18 @@ int		ft_strlen(char *str)
 	return (i);
 }
 
+int		ft_strcmp(char *stra, char *strb)
+{
+	int i;
+
+	i = 0;
+	while (stra[i] && strb[i] && stra[i] == strb[i])
+	{
+		i++;
+	}
+	return (stra[i] - strb[i]);
+}
+
 t_point *make_list(char *str)
 {
 	int words;
@@ -156,12 +168,47 @@ void	swap_values(t_point *a, t_point *b)
 void	bubble_sort(t_point *list)
 {
 	t_point *head;
+	int	i;
+
+	i = 1;
 	head = list;
-	while (head && head->next)
+	while (i == 1)
 	{
-		if (head->length > head->next->length)
-			swap_values(head, head->next);
-		head = head->next;
+		i = 0;
+		head = list;
+		while (head && head->next)
+		{
+			if (head->length > head->next->length)
+			{
+				i = 1;
+				swap_values(head, head->next);
+			}
+			head = head->next;
+		}
+	}
+}
+
+void	alph_sort(t_point *list)
+{
+	t_point *tmp;
+	int	i;
+
+	tmp = list;
+	i = 1;
+
+	while (i == 1)
+	{
+		i = 0;
+		tmp = list;
+		while (tmp && tmp->next)
+		{
+			if (tmp->length == tmp->next->length && ft_strcmp(tmp->str, tmp->next->str) > 0)
+				{
+					i = 1;
+					swap_values(tmp, tmp->next);
+				}
+			tmp = tmp->next;
+		}
 	}
 }
 
@@ -187,6 +234,7 @@ int main(int argc, char **argv)
 		//}
 		list = make_list(str);
 		bubble_sort(list);
+		alph_sort(list);
 		while (list)
 		{
 			printf("%s", list->str);
