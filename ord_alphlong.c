@@ -6,7 +6,7 @@
 /*   By: hyu <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 22:33:40 by hyu               #+#    #+#             */
-/*   Updated: 2020/03/02 22:50:38 by hyu              ###   ########.fr       */
+/*   Updated: 2020/03/02 23:12:18 by hyu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,8 +154,6 @@ void	swap_values(t_point *a, t_point *b)
 	t_point *tmp;
 
 	tmp = (t_point*)malloc(sizeof(t_point*));
-//	char *str;
-//	int length;
 
 	tmp->str = a->str;
 	tmp->length = a->length;
@@ -212,6 +210,42 @@ void	alph_sort(t_point *list)
 	}
 }
 
+void	print_sort(char *str)
+{
+	int i;
+	t_point *list;
+	int first;
+
+	list = make_list(str);
+	bubble_sort(list);
+	alph_sort(list);
+	while (list)
+	{
+		i = list->length;
+		//printf("%i", i);
+		first = 0;
+		while (list->length == i && list && list->next)
+		{
+			if (first == 0)
+			{
+				printf("%s", list->str);
+				first = 1;
+			}
+			else if (first == 1)
+			{
+				printf(" %s", list->str);
+			}
+			list = list->next;
+		}
+		if (list->str)
+		{
+			printf("\n");
+			list = list->next;
+			//printf("a");
+		}
+	}
+}
+
 int main(int argc, char **argv)
 {
 	char *str;
@@ -224,24 +258,9 @@ int main(int argc, char **argv)
 	if (argc >= 2)
 	{
 		str = argv[1];
-		//i = word_num(str);
-		//str2 = ft_split(str);
-		//printf("%i", i);
-		//while (j < i)
-		//{
-		//	printf("%s", str2[j]);
-		//	j++;
-		//}
-		list = make_list(str);
-		bubble_sort(list);
-		alph_sort(list);
-		while (list)
-		{
-			printf("%s", list->str);
-			printf("%i", list->length);
-			list = list->next;
-		}
+		print_sort(str);
 	}
-	printf("\n");
+	if (argc < 2)
+		printf("\n");
 	return (0);
 }
